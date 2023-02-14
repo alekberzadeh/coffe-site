@@ -1,0 +1,35 @@
+$color:(
+    "color1" :#fff,
+    "color2" : #eee,
+    "color3" : #ccc,
+    "black":#13131a,
+    "bg" : #010103,
+    "border" : rgba(255,255,255,.3),
+    "maincolor" :#d3ad7f,
+
+);
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/home-img.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .content{
+        max-width: 60rem;
+        h3{
+            font-size: 6rem;
+            text-transform: uppercase;
+            color: map-get($color , "color1" );
+        }
+        p{
+            font-size: 2rem;
+            font-weight: lighter;
+            line-height: 1.8;
+            padding: 1rem 0;
+            color: map-get($color , "color2" );
+        }
+    }
+}

@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+$color:(
+    "bgcolor" :#010103,
+    "colorff" :#fff,
+    "maincolor" :#d3ad7f,
+);
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+body{
+    background: map-get($color , "bgcolor" );
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+section{
+    padding: 2rem 7%;
+}
+.heading{
+    text-align: center;
+    color: map-get($color , "colorff" );
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    span{
+        color: map-get($color , "maincolor" );
+        text-transform: uppercase;
+    }
+}
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: map-get($color , "colorff" );
+    background: map-get($color , "maincolor" );
+    cursor: pointer;
+    transition: all ease .4s;
+    &:hover{
+        letter-spacing: .2rem;
+    }
+}
+@import "path/color";
+@import "path/header";
+@import "path/home";
+@import "path/about";
+@import "path/menu";
+@import "path/products";
+@import "path/review";
+@import "path/contact";
+@import "path/blogs";
+@import "path/footer";
+@import "path/responsive";

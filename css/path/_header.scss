@@ -1,0 +1,142 @@
+$color:(
+    "color1" :#fff,
+    "color2" : #eee,
+    "color3" : #ccc,
+    "black":#13131a,
+    "bg" : #010103,
+    "border" : rgba(255,255,255,.3),
+    "maincolor" :#d3ad7f,
+    
+);
+
+@mixin display(){
+    display: flex;
+    align-items: center;
+};
+@mixin width(){
+   width: 100%;
+   height: 100%;
+};
+#menu-btn{
+    display: none;
+}
+.header{
+    background: map-get($color , "bg" );
+    @include display();
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: .1rem solid map-get($color , "border" );
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+
+    .logo{
+        img{
+            height: 6rem;
+        }
+    }
+    .navbar{
+        a{
+            margin: 0 1rem;
+            font-size: 1.6rem;
+            color: map-get($color , "color1" );
+            &:hover{
+                color: map-get($color , "maincolor" );
+                border-bottom: .1rem solid map-get($color , "maincolor" );
+                padding-bottom: .5rem;
+            }
+
+        }
+    }
+    .icons{
+        .fas{
+            color: map-get($color , "color1" );
+            cursor: pointer;
+            font-size: 2.5rem;
+            margin-left: 2rem;
+            transition: all .4s;
+            &:hover{
+                color: map-get($color , "maincolor" );
+            }
+        }
+        
+    }
+    
+    .search-form{
+        position: absolute;
+        top: 155%;
+        right: 7%;
+        background: map-get($color , "color1" );
+        width: 50rem;
+        height: 5rem;
+        @include display();
+        transform: scaleY(0);
+        transform-origin: top;
+        &.active{
+            transform: scaleY(1);
+        }
+        input{
+            @include width();
+            font-size: 1.6rem;
+            color: map-get($color , "black" );
+            padding: 1rem;
+            text-transform: none;
+        }
+        .fas{
+            cursor: pointer;
+            font-size: 2.2rem;
+            margin-right: 1.5rem;
+            color: map-get($color , "black" );
+            &:hover{
+                color:  map-get($color , "maincolor" );
+            }
+        }
+      
+    }
+    .cart-items-container{
+        position: absolute;
+        top: 100%; right: -100%;
+        height: calc(100vh - 9.5rem);
+        width: 35rem;
+        background: map-get($color , "color1" );
+        padding: 0 1.5rem;
+        &.active{
+            right: 0;
+        }
+        .cart-item{
+            position: relative;
+            margin: 2rem 0;
+            @include display();
+            gap: 1.5rem;
+            .fas{
+                position: absolute;
+                top: 1rem; right: 1rem;
+                font-size: 2rem;
+                cursor: pointer;
+                color:  map-get($color , "black" );
+                &:hover{
+                    color: map-get($color , "maincolor" );
+                }
+            }
+            img{
+                height: 7rem;
+            }
+            .content{
+                h3{
+                    font-size: 2rem;
+                    color: map-get($color , "black" );
+                    padding-bottom: 0.5rem;
+                }
+                .price{
+                    font-size: 1.5rem;
+                    color: map-get($color , "maincolor" );
+                }
+            }
+            
+        }
+        .btn{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

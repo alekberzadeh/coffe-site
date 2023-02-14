@@ -1,0 +1,57 @@
+
+
+
+.products {
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+        .box{
+            padding: 2rem;
+            text-align: center;
+            border: .1rem solid map-get($color, "border" );
+            .icons{
+                a{
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 5rem;
+                    border: .1rem solid map-get($color, "border" );
+                    font-size: 2rem;
+                    color: map-get($color, "color1" );
+                    margin: 0.3rem;
+                    &:hover{
+                        background: map-get($color, "maincolor" );
+                    }
+                }
+            }
+            .image{
+                padding: 2.5rem 0;
+                img{
+                    height: 25rem;
+                }
+            }
+            .content{
+                h3{
+                    color: map-get($color, "color1" );
+                    font-size: 2.5rem;
+                }
+                .stars{
+                    padding: 1.5rem;
+                    i{
+                        color: map-get($color, "maincolor" );
+                        font-size: 1.7rem;
+                    }
+                }
+                .price{
+                    color: map-get($color, "color1" );
+                    font-size: 2.5rem;
+                    span{
+                        text-decoration: line-through;
+                        font-weight: lighter;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

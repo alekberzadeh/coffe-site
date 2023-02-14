@@ -1,0 +1,45 @@
+.footer{
+    background: map-get($color, "black" );
+    text-align: center;
+    .share{
+        padding: 1rem 0;
+        a{
+            height: 5rem;
+            width: 5rem;
+            line-height: 5rem;
+            font-size: 2rem;
+            color: map-get($color, "color1" );
+            border: .1rem solid map-get($color, "border" );
+            margin: .3rem;
+            border-radius: 50%;
+            &:hover{
+                background: map-get($color, "maincolor" );
+            }
+        }
+    }
+    .links{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        gap: 1rem;
+        a{
+            padding: 0.7rem 2rem;
+            color: map-get($color, "color1" );
+            border: .1rem solid map-get($color, "border" );
+            font-size: 2rem;
+            &:hover{
+                background: map-get($color, "maincolor" );
+            }
+        }
+    }
+    .credit{
+        font-size: 2rem;
+        color: map-get($color, "color1" );
+        font-weight: lighter;
+        padding: 1.5rem;
+        span{
+            color: map-get($color, "maincolor" );
+        }
+    }
+}

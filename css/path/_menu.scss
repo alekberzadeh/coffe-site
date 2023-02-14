@@ -1,0 +1,40 @@
+
+
+.menu{
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+
+        .box{
+            padding: 5rem;
+            text-align: center;
+            border: .1rem solid map-get($color , "border" );
+            img{
+                height: 10rem;
+            }
+            h3{
+                color: map-get($color , "color1" );
+                font-size: 2rem;
+                padding: 1rem 0;
+            }
+
+            .price{
+                color: map-get($color , "color1" );
+                font-size: 2.5rem;
+                padding: .5rem 0;
+                span{
+                    font-size: 1.5rem;
+                    text-decoration: line-through;
+                    font-weight: lighter;
+                }
+            }
+            &:hover{
+                background: map-get($color , "color1" );
+                & > *{
+                    color: map-get($color , "black" );
+                }
+            }
+        }
+    }
+}
